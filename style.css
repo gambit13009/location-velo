@@ -1,0 +1,355 @@
+/* ------------- REGLES DU SITE ------------- */
+
+/* ------ Mise en page generale ------------- */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background: rgb(34,193,195);
+  background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(244,221,174,1) 100%);
+}
+.bloc_page {
+  width: 100%;
+  margin: auto;
+}
+
+/* ------------- HEADER ------------- */
+
+@keyframes anim_btn_header {
+  0% {
+         transform:translateY(0)
+    }
+    50%{
+         transform:translateY(-8px)
+    }
+  100%{
+         transform:translateY(0)
+  }
+}
+
+header a i:hover {
+  animation:anim_btn_header 0.5s ease-in-out infinite;
+  transition:0.1s;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 8.5rem;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(134,134,249,1) 35%, rgba(0,212,255,1) 100%);
+  border-bottom: solid 1px black;
+}
+
+header h1 {
+  margin: 0.8rem;
+  font-size: 3em;
+}
+
+header h1 i {
+    font-size: 1em;
+    color: white;
+    margin: 0 1rem 0 1rem;
+}
+
+header p {
+  text-decoration: underline;
+  font-size: 1.2rem;
+}
+
+#lien_ancre i {
+  color: grey;
+}
+
+#currentdate {
+  font-weight: bold;
+}
+
+#currenttime {
+  font-weight: bold;
+}
+
+/* ---- Reglages de base -----*/
+i {
+  font-size: 2em;
+  color: #00bbff;
+}
+
+strong {
+  font-size: 1.5em;
+}
+
+#erreur strong {
+    color: red;
+    font-size: 0.9em;
+}
+
+em {
+    color: red;
+    font-weight: bold;
+}
+h1 {
+    text-align: center;
+    margin: auto;
+}
+h2 {
+    font-size: 2em;
+    font-weight: bold;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+h5 {
+    font-weight: bold;
+    margin-bottom: 40px;
+    font-size: 1.5em;
+}
+section {
+    display: flex;
+    padding: 15px;
+}
+
+
+/*------------- SLIDER ------------*/
+
+#section_diapo{
+    display: flex;
+    justify-content: center;
+}
+#diaporama {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    z-index: 10;
+    background-color: white;
+    overflow: hidden;
+    display: flex;
+    border: solid grey 1px;
+}
+#diaporama p {
+    font-style: italic;
+}
+.step {
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    transform: translateX (0);
+    transition: 1.2s;
+    background-color: white;
+}
+
+.slider_text {
+    width: 100%;
+    height: 450px;
+    margin: auto;
+    display: flex;
+}
+
+figure {
+    text-align: center;
+    margin: auto 50px;    
+    text-align: left;
+    margin-left: 80px;
+}
+figcaption {
+    margin: auto;
+    text-align: center;
+    margin-right: 60px;
+}
+img {
+    margin: auto;
+    border: solid 1px grey;
+}
+
+
+#etape1 {
+    width: 300px;
+    border:solid 1px grey;
+}
+#etape2 {
+    width: 250px;
+}
+#etape3 {
+    width: 280px;
+}
+#slide4 > div {
+    display: flex;
+    flex-direction: column;
+}
+#slide4 figure{
+    display: flex;
+    margin: auto;
+}
+
+#slide4 figcaption{
+    margin: auto;
+    margin-bottom: 70px;
+    text-align: center;
+}
+
+#etape4 {
+    margin: auto;
+    margin-top: 20px;
+    width: 450px;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: black;
+    border: black solid 1px;
+}    
+#left, #right {
+    height: 70px;
+    width: 40px;
+    margin: 180px -5px;
+    z-index: 1;
+    cursor: pointer;
+}
+#left {
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px; 
+}
+#right {
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px; 
+}
+
+nav {
+    position: absolute;
+    color: white;
+    z-index: 10;
+    bottom: 20px;
+    left: 60%;
+}
+
+#pause_diapo, #play_diapo {
+    position: absolute;
+    z-index: 10;
+    bottom: 15px;
+    left: 55%;
+    cursor: pointer;
+    color: grey;
+}
+
+#play_diapo {
+    left: 50%;
+}
+
+#pause_diapo:hover, #play_diapo:hover {
+    color: red;
+}
+
+
+nav span {
+    background-color: black;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+/*---------------------Partie map----------------------*/
+
+#map {
+    width : 100%;
+    height : 700px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 2px grey;
+}
+
+#map img {
+  border: none;
+}
+
+/*--------------------Partie réservation-----------------*/
+
+#temps_restant {
+    width: auto;
+    border: solid 1px black;
+    margin: 0 5px 10px 5px;
+    text-align: center;
+    display: none;
+    background-color: white;
+    padding: 5px;
+}
+
+
+.infos_stations {
+    width: 30%;
+    height: 20%;
+    background-color: white;
+    padding: 15px;
+    margin: 0 0 0 10px;
+    text-align: center;
+}
+
+#infos_dynamiques {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10px;
+    display: none;
+    border: solid 1px grey;
+}
+
+.reservation {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    margin: auto;
+    display: none;
+    background-color: white;
+    border: solid 1px grey;
+}
+
+.reservation input {
+    height: 25px;
+    width: 180px;
+    margin: auto;
+    margin-top: 20px;
+}
+
+
+canvas { 
+
+    margin: auto;
+    margin-top: 20px;
+    border: 1px solid black;
+    background: white;
+}
+
+.btn-success {
+  background-color: #00bbff;
+  font-weight: bold;
+  padding: 8px 8px 8px 8px;
+  cursor: pointer;
+}
+
+.btn-danger {
+  background-color: red;
+  font-weight: bold;
+  padding: 8px 8px 8px 8px;
+  cursor: pointer;
+}
+
+#reserver, #init {
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+#annuler p {
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  #currentdate, #currenttime {
+    display: none;
+  }
+  .fas.fa-bicycle {
+    display: none;
+  }
+}
